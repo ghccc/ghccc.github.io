@@ -161,6 +161,7 @@ _posts文件夹，将其清空，然后把自己写的文章放进去。
 
 > cd username.github.io  
 git add remote username.github.io  
+git add -A  
 git commit -m "build blog"  
 git push
 
