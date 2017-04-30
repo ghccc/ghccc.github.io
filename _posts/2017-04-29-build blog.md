@@ -2,7 +2,7 @@
 layout: post
 title:  使用github和jekyll搭建个人免费托管博客
 date:   2017-04-29 20:00:00 +0800
-categories: 博客 网站
+tag: 博客 网站
 ---
 其实博客四月初的时候就建好了，当时自己是在vps上面使用LAMP配合WordPress来建的，后来由于种种原因，我把博客迁到了github重新开始。
 好了，废话不多说，正题开始：
