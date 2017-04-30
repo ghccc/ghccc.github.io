@@ -35,21 +35,21 @@ Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个�
 ### jekyll的基本目录结构
 
 > 1.├── _config.yml  
-2.├── _drafts  
-3.|   ├── begin-with-the-crazy-ideas.textile  
-4.|   └── on-simplicity-in-technology.markdown  
-5.├── _includes  
-6.|   ├── footer.html  
-7.|   └── header.html  
-8.├── _layouts  
-9.|   ├── default.html  
-10.|   └── post.html  
-11.├── _posts  
-12.|   ├── 2007-10-29-why-every-programmer-should-play-nethack.textile  
-13.|   └── 2009-04-26-barcamp-boston-4-roundup.textile  
-14.├── _site  
-15.├── .jekyll-metadata  
-16.└── index.html
+  2.├── _drafts  
+  3.|   ├── begin-with-the-crazy-ideas.textile  
+  4.|   └── on-simplicity-in-technology.markdown  
+  5.├── _includes  
+  6.|   ├── footer.html  
+  7.|   └── header.html  
+  8.├── _layouts  
+  9.|   ├── default.html  
+  10.|   └── post.html  
+  11.├── _posts  
+  12.|   ├── 2007-10-29-why-every-programmer-should-play-nethack.textile  
+  13.|   └── 2009-04-26-barcamp-boston-4-roundup.textile  
+  14.├── _site  
+  15.├── .jekyll-metadata  
+  16.└── index.html
 
 简单介绍一下他们的作用：
 
