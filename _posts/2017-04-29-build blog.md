@@ -36,7 +36,7 @@ Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个�
 
 > 1.├── _config.yml  
   2.├── _drafts  
-  3.|   ├── begin-with-the-crazy-ideas.textile
+  3.|   ├── begin-with-the-crazy-ideas.textile  
   4.|   └── on-simplicity-in-technology.markdown  
   5.├── _includes  
   6.|   ├── footer.html  
