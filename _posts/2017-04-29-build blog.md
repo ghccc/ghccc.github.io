@@ -7,7 +7,7 @@ categories: 博客 网站
 其实博客四月初的时候就建好了，当时自己是在vps上面使用LAMP配合WordPress来建的，后来由于种种原因，我把博客迁到了github重新开始。
 好了，废话不多说，正题开始：
 
-# 关于github的配置
+### 关于github的配置
 
 准备工作：在github申请一个账号，然后创建一个名为<用户名>.github.io的仓库，比如我的用户名是ghccc，那么我的仓库名字就是ghccc.github.io
 
@@ -28,11 +28,11 @@ categories: 博客 网站
 为了以后推送方便设置ssh，配置请参考[如何创建git公钥][2]。
 git相关配置已经完成，接下来就是正式的搭建博客。
 
-# 首先简单说明一下jekyll是什么
+### 首先简单说明一下jekyll是什么
     
 Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过一个转换器（如 Markdown）和Liquid渲染器转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是完全免费的。
 
-## jekyll的基本目录结构
+### jekyll的基本目录结构
 
 > ├── _config.yml  
   ├── _drafts  
@@ -77,7 +77,7 @@ Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个�
 > index.html  
  如果这些文件中包含 YAML 头信息 部分，Jekyll 就会自动将它们进行转换。
 
-## jekyll的配置
+### jekyll的配置
 
 jekyll的配置写在_config.yml中，具体配置有很多，在此放出我的配置，更详细的内容请参考[jekyll的官方配置文档][3]
 
@@ -111,7 +111,7 @@ nav:
 paginate: 20  
 paginate_path: "page/:num/"  
 
-## 如果不想自己配置模板怎么办
+### 如果不想自己配置模板怎么办
 
 可以去[这里][4]寻找自己中意的模板，或者你也可以直接fork[我的模板][5]，然后把源码下载下来稍加修改之后放到刚才创建的本地目录里面。
 
@@ -168,6 +168,23 @@ git push
 注：这里的“username”指你的github用户名
 
 这样博客就被部署在github上了，过十分钟左右就可以通过ghcc.github.io进行访问。
+
+### 关于自定义域名
+我用的是[.tk](http://www.dot.tk)的免费域名ghccc.tk,申请完域名之后记得在nameserver里面添加几条A记录，然后在github的仓库设置页面github pages栏目下面可以直接填入你刚刚申请的域名。   
+ps：使用github提供的域名可以使用github pages自带的强制https加密选项，如果是自定义域名只能自己安装ssl加密证书。
+
+### 评论和统计
+虽然多说很好用，但是六月一号就要关闭了，所以只好迁移到网易云跟帖，jekyll评论代码接入请看[官方文档](https://gentie.163.com/help.html)。
+用的是[百度统计](http://zhanzhang.baidu.com)和 [Google analytics](https://www.google.com/analytics/),接入方式很简单，获取统计id，然后在_config.yml中填入id即可。
+
+### 小绿锁
+我用的是[cloudflare](https://www.cloudflare.com)的ssl加密，目前看来还比较稳定，登录之后照着官方指导配置就好。
+
+### 图床
+打算用七牛云当做图床，目前还未配置，待补充。
+
+### 国内镜像
+因为github禁止百度爬虫进入，所以网站内容无法被百度收录，初步打算在coding上建立一个镜像站点，然后使用DNSPOD，将国内用户解析到coding上，国外用户解析到github上。（注：此方法试了两天一直未成功，暂时放弃）
 
 
 
