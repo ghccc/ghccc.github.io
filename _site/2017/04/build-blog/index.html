@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>使用github和jekyll搭建个人免费托管博客</title>
+  <meta name="description" content="其实博客四月初的时候就建好了，当时自己是在vps上面使用LAMP配合WordPress来建的，后来由于种种原因，我把博客迁到了github重新开始。好了，废话不多说，正题开始：">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="使用github和jekyll搭建个人免费托管博客">
+  <meta name="twitter:description" content="其实博客四月初的时候就建好了，当时自己是在vps上面使用LAMP配合WordPress来建的，后来由于种种原因，我把博客迁到了github重新开始。好了，废话不多说，正题开始：">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="使用github和jekyll搭建个人免费托管博客">
+  <meta property="og:description" content="其实博客四月初的时候就建好了，当时自己是在vps上面使用LAMP配合WordPress来建的，后来由于种种原因，我把博客迁到了github重新开始。好了，废话不多说，正题开始：">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="www.ghccc.tk/2017/04/build-blog/">
+  <link rel="alternate" type="application/rss+xml" title="善恶彼岸" href="www.ghccc.tk/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+
+<!-- 站点统计 -->
+  <script 
+  async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>  
+
+<!-- 百度统计 -->
+  
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?89149bc63ddd0fbda82902ae936b8a22";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  
+
+<!-- google 统计 -->
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-98133145-1', 'auto');
+      ga('send', 'pageview');
+  </script>
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于我
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 善恶彼岸 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                ghccc
+                            
+                        </h2>
+                        <p>
+                           
+                                折腾/作死
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 善恶彼岸" class="blog-button">善恶彼岸</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">个人世界</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">欢迎来到我的世界~</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">所有文章</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于我</a></li>
+                
+              </ul>
+            </nav>
+          </div>          
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">使用github和jekyll搭建个人免费托管博客</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2017-04-29 20:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2017-04-29</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <p>其实博客四月初的时候就建好了，当时自己是在vps上面使用LAMP配合WordPress来建的，后来由于种种原因，我把博客迁到了github重新开始。
+好了，废话不多说，正题开始：</p>
+
+<h3 id="github">关于github的配置</h3>
+
+<p>准备工作：在github申请一个账号，然后创建一个名为<用户名>.github.io的仓库，比如我的用户名是ghccc，那么我的仓库名字就是ghccc.github.io</用户名></p>
+
+<p>首先，下载配置git，我用的ubuntu16.04系统，所以在终端中键入：</p>
+
+<blockquote>
+  <p>sudo apt-get install git</p>
+</blockquote>
+
+<p>开始安装，如果安装过程提示缺少某些依赖包，按照提示一个个安装即可，其他系统请参考<a href="https://pages.github.com/">官网说明</a>。
+安装完git之后在本地创建一个名字和你刚刚创建的仓库名字一样的文件夹，比如我刚刚创建的仓库名为ghccc.github.io，本地文件夹名字也就是ghccc.github.io，然后用git初始化此目录，并添加远程仓库。</p>
+
+<p>在ubuntu16.04命令行模式下操作为：</p>
+
+<blockquote>
+  <p>mkdir ghccc.github.io<br />
+  cd ghccc.github.io<br />
+  git init<br />
+  git remote add git@github.com:uesrname/username.github.io.git</p>
+</blockquote>
+
+<p>为了以后推送方便设置ssh，配置请参考<a href="https://gist.github.com/yisibl/8019693">如何创建git公钥</a>。
+git相关配置已经完成，接下来就是正式的搭建博客。</p>
+
+<h3 id="jekyll">首先简单说明一下jekyll是什么</h3>
+<p>Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过一个转换器（如 Markdown）和Liquid渲染器转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是完全免费的。</p>
+
+<h1 id="jekyll-1">jekyll的基本目录结构</h1>
+
+<blockquote>
+  <p>1.├── _config.yml<br />
+2.├── _drafts<br />
+3.|   ├── begin-with-the-crazy-ideas.textile<br />
+4.|   └── on-simplicity-in-technology.markdown<br />
+5.├── _includes<br />
+6.|   ├── footer.html<br />
+7.|   └── header.html<br />
+8.├── _layouts<br />
+9.|   ├── default.html<br />
+10.|   └── post.html<br />
+11.├── _posts<br />
+12.|   ├── 2007-10-29-why-every-programmer-should-play-nethack.textile<br />
+13.|   └── 2009-04-26-barcamp-boston-4-roundup.textile<br />
+14.├── _site<br />
+15.├── .jekyll-metadata<br />
+16.└── index.html</p>
+</blockquote>
+
+<p>简单介绍一下他们的作用：</p>
+
+<blockquote>
+  <p>_config.yml<br />
+ 保存配置数据</p>
+</blockquote>
+
+<blockquote>
+  <p>_drafts<br />
+ 保存未发布的草稿</p>
+</blockquote>
+
+<blockquote>
+  <p>_includes<br />
+ 可以用来存放一些小的可复用的模块，方便通过{ % include file.ext %}（去掉前两个{中或者{与%中的空格，下同）灵活的调用。</p>
+</blockquote>
+
+<blockquote>
+  <p>_layouts<br />
+ layouts（布局）是包裹在文章外部的模板。布局可以在 YAML 头信息中根据不同文章进行选择。</p>
+</blockquote>
+
+<blockquote>
+  <p>_posts<br />
+ 文章存放位置</p>
+</blockquote>
+
+<blockquote>
+  <p>_site<br />
+ 这个是Jekyll生成的最终的文档，不用去关心。最好把他放在你的.gitignore文件中。</p>
+</blockquote>
+
+<blockquote>
+  <p>.jekyll-metadata<br />
+ 该文件帮助 Jekyll 跟踪哪些文件从上次建立站点开始到现在没有被修改，哪些文件需要在下一次站点建立时重新生成。最好把它加入.gitignore文件中。</p>
+</blockquote>
+
+<blockquote>
+  <p>index.html<br />
+ 如果这些文件中包含 YAML 头信息 部分，Jekyll 就会自动将它们进行转换。</p>
+</blockquote>
+
+<h3 id="jekyll-2">jekyll的配置</h3>
+
+<p>jekyll的配置写在_config.yml中，具体配置有很多，在此放出我的配置，更详细的内容请参考<a href="http://jekyllcn.com/">jekyll的官方配置文档</a></p>
+
+<blockquote>
+  <p>title: 善恶彼岸<br />
+subtitle: 个人世界<br />
+description: 欢迎来到我的世界~<br />
+avatarTitle: ghccc<br />
+avatarDesc: 折腾/作死<br />
+url: “www.ghccc.tk”<br />
+comment:<br />
+social:<br />
+    weibo:<br />
+    github: ghccc<br />
+    twitter: <br />
+    mail:<br />
+ baidu:<br />
+    id: 89149bc63ddd0fbda82902ae936b8a22<br />
+    id: UA-98133145-1 <br />
+    host: auto <br />
+permalink: /:year/:month/:title/<br />
+highlighter: rouge<br />
+textColor: #FF000<br />
+cover_color: clear<br />
+blog_button:<br />
+    title: 博客主页<br />
+nav:<br />
+    - {title: 所有文章, description: archive, url: ‘/archive’}<br />
+    - {title: 标签, description: tags, url: ‘/tags’} <br />
+    - {title: 关于我, description: about, url: ‘/about’}<br />
+ gems: [jekyll-paginate]<br />
+paginate: 20<br />
+paginate_path: “page/:num/”</p>
+</blockquote>
+
+<h3 id="section">如果不想自己配置模板怎么办</h3>
+<p>可以去<a href="https://github.com/jekyll/jekyll/wiki/Sites">这里</a>寻找自己中意的模板，或者你也可以直接fork<a href="https://github.com/ghccc/ghccc.github.io">我的模板</a>，然后把源码下载下来稍加修改之后放到刚才创建的本地目录里面。
+推送到远程仓库：</p>
+
+<blockquote>
+  <p>cd username.github.io<br />
+git add remote username.github.io<br />
+git commit -m “build blog”<br />
+git push</p>
+</blockquote>
+
+<p>注：这里的“username”指你的github用户名</p>
+
+<p>这样博客就被部署在github上了，过十分钟左右就可以通过ghcc.github.io进行访问。</p>
+
+
+
+  </section>
+</article>
+
+<section>
+
+            <div class="content-play">
+              <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">打赏一个呗</a></p>
+              <div class="hide_box-play"></div>
+              <div class="shang_box-play">
+                <a class="shang_close-play" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="/images/payimg/close.jpg" alt="取消" /></a>
+                <div class="shang_tit-play">
+                  <p>感谢您的支持，我会继续努力的!</p>
+                </div>
+                <div class="shang_payimg">
+                    <img src="/images/payimg/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+              <div class="shang_payimg">    
+                    <img src="/images/payimg/weipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+                <div class="pay_explain">扫码打赏，你说多少就多少</div>
+                <div class="shang_payselect">
+                  <div class="pay_item checked" data-id="alipay">
+                    <span class="pay_logo"><img src="/images/payimg/alipay.jpg" alt="支付宝" /></span>
+                  </div>
+                  <div class="pay_item" data-id="weipay">
+                    <span class="pay_logo"><img src="/images/payimg/wechat.jpg" alt="微信" /></span>
+                  </div>
+                </div>
+                <div class="shang_info-play">
+                  <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+            function dashangToggle(){
+              $(".hide_box-play").fadeToggle();
+              $(".shang_box-play").fadeToggle();
+            }
+            </script>
+
+            <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
+
+            <style type="text/css">
+              .content-play{width:80%;margin-top: 20px;margin-bottom: 10px;height:40px;}
+              .hide_box-play{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
+              .shang_box-play{width:540px;height:540px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
+              .shang_box-play img{border:none;border-width:0;}
+              .dashang{display:block;width:100px;margin:5px auto;height:25px;line-height:25px;padding:10px;background-color:#E74851;color:#fff;text-align:center;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;transition: all 0.3s;}
+              .dashang:hover{opacity:0.8;padding:15px;font-size:18px;}
+              .shang_close-play{float:right;display:inline-block;
+                margin-right: 10px;margin-top: 20px;
+              }
+              .shang_logo{display:block;text-align:center;margin:20px auto;}
+              .shang_tit-play{width: 100%;height: 75px;text-align: center;line-height: 66px;color: #a3a3a3;font-size: 16px;background: url('/images/payimg/cy-reward-title-bg.jpg');font-family: 'Microsoft YaHei';margin-top: 7px;margin-right:2px;}
+              .shang_tit-play p{color:#a3a3a3;text-align:center;font-size:16px;}
+              .shang_payimg{width:140px;padding:10px;padding-left: 80px; /*border:6px solid #EA5F00;**/margin:0 auto;border-radius:3px;height:140px;display:inline-block;}
+              .shang_payimg img{display:inline-block;margin-right:10px;float:left;text-align:center;width:140px;height:140px; }
+              .pay_explain{text-align:center;margin:10px auto;font-size:12px;color:#545454;}
+              .shang_payselect{text-align:center;margin:0 auto;margin-top:40px;cursor:pointer;height:60px;width:500px;margin-left:110px;}
+              .shang_payselect .pay_item{display:inline-block;margin-right:140px;float:left;}
+              .shang_info-play{clear:both;}
+              .shang_info-play p,.shang_info-play a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+            </style>
+
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2017/04/test/" data-toggle="tooltip" data-placement="top" title="Test">上一篇：  <span>Test</span>
+            </a>
+        </li>
+        
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div class="ds-thread" data-thread-key="/2017/04/build-blog/" data-title="使用github和jekyll搭建个人免费托管博客" data-url="www.ghccc.tk/2017/04/build-blog/"></div>
+
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"ghccc"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+
+          
+          <!-- Github -->
+          <li class="navigation__item_social">
+            <a href="https://github.com/ghccc" title="@ghccc 的 Github" target="_blank">
+              <i class='social fa fa-github fa-2x'></i>
+              <span class="label">Github</span>
+            </a>
+          </li>
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; 善恶彼岸 2017 Theme by <a href="http://ghccc.tk/">ghccc</a> |
+            <iframe
+                style="margin-left: 2px; margin-bottom:-5px;"
+                frameborder="0" scrolling="0" width="91px" height="20px"
+                src="https://ghbtns.com/github-btn.html?user=ghccc&repo=ghccc.github.io&type=star&count=true" >
+            </iframe>
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+  </body>
+
+</html>

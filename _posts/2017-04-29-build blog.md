@@ -1,0 +1,136 @@
+---
+layout: post
+title:  使用github和jekyll搭建个人免费托管博客
+date:   2017-04-29 20:00:00 +0800
+categories: 博客 网站
+---
+其实博客四月初的时候就建好了，当时自己是在vps上面使用LAMP配合WordPress来建的，后来由于种种原因，我把博客迁到了github重新开始。
+好了，废话不多说，正题开始：
+
+###关于github的配置
+
+准备工作：在github申请一个账号，然后创建一个名为<用户名>.github.io的仓库，比如我的用户名是ghccc，那么我的仓库名字就是ghccc.github.io
+
+首先，下载配置git，我用的ubuntu16.04系统，所以在终端中键入：
+
+> sudo apt-get install git
+
+开始安装，如果安装过程提示缺少某些依赖包，按照提示一个个安装即可，其他系统请参考[官网说明][1]。
+安装完git之后在本地创建一个名字和你刚刚创建的仓库名字一样的文件夹，比如我刚刚创建的仓库名为ghccc.github.io，本地文件夹名字也就是ghccc.github.io，然后用git初始化此目录，并添加远程仓库。
+
+在ubuntu16.04命令行模式下操作为：
+
+> mkdir ghccc.github.io  
+  cd ghccc.github.io  
+  git init  
+  git remote add git@github.com:uesrname/username.github.io.git
+
+为了以后推送方便设置ssh，配置请参考[如何创建git公钥][2]。
+git相关配置已经完成，接下来就是正式的搭建博客。
+
+###首先简单说明一下jekyll是什么
+Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过一个转换器（如 Markdown）和Liquid渲染器转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是完全免费的。
+
+#jekyll的基本目录结构
+
+> 1.├── _config.yml  
+2.├── _drafts  
+3.|   ├── begin-with-the-crazy-ideas.textile  
+4.|   └── on-simplicity-in-technology.markdown  
+5.├── _includes  
+6.|   ├── footer.html  
+7.|   └── header.html  
+8.├── _layouts  
+9.|   ├── default.html  
+10.|   └── post.html  
+11.├── _posts  
+12.|   ├── 2007-10-29-why-every-programmer-should-play-nethack.textile  
+13.|   └── 2009-04-26-barcamp-boston-4-roundup.textile  
+14.├── _site  
+15.├── .jekyll-metadata  
+16.└── index.html
+
+简单介绍一下他们的作用：
+
+> _config.yml  
+ 保存配置数据
+
+> _drafts  
+ 保存未发布的草稿
+
+> _includes  
+ 可以用来存放一些小的可复用的模块，方便通过{ % include file.ext %}（去掉前两个{中或者{与%中的空格，下同）灵活的调用。
+
+> _layouts  
+ layouts（布局）是包裹在文章外部的模板。布局可以在 YAML 头信息中根据不同文章进行选择。
+
+> _posts  
+ 文章存放位置
+
+> _site  
+ 这个是Jekyll生成的最终的文档，不用去关心。最好把他放在你的.gitignore文件中。
+
+> .jekyll-metadata  
+ 该文件帮助 Jekyll 跟踪哪些文件从上次建立站点开始到现在没有被修改，哪些文件需要在下一次站点建立时重新生成。最好把它加入.gitignore文件中。
+
+> index.html  
+ 如果这些文件中包含 YAML 头信息 部分，Jekyll 就会自动将它们进行转换。
+
+###jekyll的配置
+
+jekyll的配置写在_config.yml中，具体配置有很多，在此放出我的配置，更详细的内容请参考[jekyll的官方配置文档][3]
+
+> title: 善恶彼岸  
+subtitle: 个人世界  
+description: 欢迎来到我的世界~  
+avatarTitle: ghccc  
+avatarDesc: 折腾/作死  
+url: "www.ghccc.tk"  
+comment:  
+social:  
+    weibo:  
+    github: ghccc  
+    twitter:   
+    mail:  
+ baidu:  
+    id: 89149bc63ddd0fbda82902ae936b8a22  
+    id: UA-98133145-1   
+    host: auto   
+permalink: /:year/:month/:title/  
+highlighter: rouge  
+textColor: #FF000  
+cover_color: clear  
+blog_button:  
+    title: 博客主页  
+nav:  
+    - {title: 所有文章, description: archive, url: '/archive'}  
+    - {title: 标签, description: tags, url: '/tags'}   
+    - {title: 关于我, description: about, url: '/about'}  
+ gems: [jekyll-paginate]  
+paginate: 20  
+paginate_path: "page/:num/"  
+
+###如果不想自己配置模板怎么办
+可以去[这里][4]寻找自己中意的模板，或者你也可以直接fork[我的模板][5]，然后把源码下载下来稍加修改之后放到刚才创建的本地目录里面。
+推送到远程仓库：
+
+> cd username.github.io  
+git add remote username.github.io  
+git commit -m "build blog"  
+git push
+
+注：这里的“username”指你的github用户名
+
+这样博客就被部署在github上了，过十分钟左右就可以通过ghcc.github.io进行访问。
+
+
+
+
+    
+
+
+  [1]: https://pages.github.com/
+  [2]: https://gist.github.com/yisibl/8019693
+  [3]: http://jekyllcn.com/
+  [4]: https://github.com/jekyll/jekyll/wiki/Sites
+  [5]: https://github.com/ghccc/ghccc.github.io

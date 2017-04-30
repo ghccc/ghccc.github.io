@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>善恶彼岸</title>
+    <description>欢迎来到我的世界~</description>
+    <link>www.ghccc.tk/</link>
+    <atom:link href="www.ghccc.tk/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 30 Apr 2017 14:32:37 +0800</pubDate>
+    <lastBuildDate>Sun, 30 Apr 2017 14:32:37 +0800</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>使用github和jekyll搭建个人免费托管博客</title>
+        <description>&lt;p&gt;其实博客四月初的时候就建好了，当时自己是在vps上面使用LAMP配合WordPress来建的，后来由于种种原因，我把博客迁到了github重新开始。
+好了，废话不多说，正题开始：&lt;/p&gt;
+
+&lt;h3 id=&quot;github&quot;&gt;关于github的配置&lt;/h3&gt;
+
+&lt;p&gt;准备工作：在github申请一个账号，然后创建一个名为&lt;用户名&gt;.github.io的仓库，比如我的用户名是ghccc，那么我的仓库名字就是ghccc.github.io&lt;/用户名&gt;&lt;/p&gt;
+
+&lt;p&gt;首先，下载配置git，我用的ubuntu16.04系统，所以在终端中键入：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sudo apt-get install git&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;开始安装，如果安装过程提示缺少某些依赖包，按照提示一个个安装即可，其他系统请参考&lt;a href=&quot;https://pages.github.com/&quot;&gt;官网说明&lt;/a&gt;。
+安装完git之后在本地创建一个名字和你刚刚创建的仓库名字一样的文件夹，比如我刚刚创建的仓库名为ghccc.github.io，本地文件夹名字也就是ghccc.github.io，然后用git初始化此目录，并添加远程仓库。&lt;/p&gt;
+
+&lt;p&gt;在ubuntu16.04命令行模式下操作为：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;mkdir ghccc.github.io&lt;br /&gt;
+  cd ghccc.github.io&lt;br /&gt;
+  git init&lt;br /&gt;
+  git remote add git@github.com:uesrname/username.github.io.git&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;为了以后推送方便设置ssh，配置请参考&lt;a href=&quot;https://gist.github.com/yisibl/8019693&quot;&gt;如何创建git公钥&lt;/a&gt;。
+git相关配置已经完成，接下来就是正式的搭建博客。&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll&quot;&gt;首先简单说明一下jekyll是什么&lt;/h3&gt;
+&lt;p&gt;Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过一个转换器（如 Markdown）和Liquid渲染器转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是完全免费的。&lt;/p&gt;
+
+&lt;h1 id=&quot;jekyll-1&quot;&gt;jekyll的基本目录结构&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1.├── _config.yml&lt;br /&gt;
+2.├── _drafts&lt;br /&gt;
+3.|   ├── begin-with-the-crazy-ideas.textile&lt;br /&gt;
+4.|   └── on-simplicity-in-technology.markdown&lt;br /&gt;
+5.├── _includes&lt;br /&gt;
+6.|   ├── footer.html&lt;br /&gt;
+7.|   └── header.html&lt;br /&gt;
+8.├── _layouts&lt;br /&gt;
+9.|   ├── default.html&lt;br /&gt;
+10.|   └── post.html&lt;br /&gt;
+11.├── _posts&lt;br /&gt;
+12.|   ├── 2007-10-29-why-every-programmer-should-play-nethack.textile&lt;br /&gt;
+13.|   └── 2009-04-26-barcamp-boston-4-roundup.textile&lt;br /&gt;
+14.├── _site&lt;br /&gt;
+15.├── .jekyll-metadata&lt;br /&gt;
+16.└── index.html&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;简单介绍一下他们的作用：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;_config.yml&lt;br /&gt;
+ 保存配置数据&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;_drafts&lt;br /&gt;
+ 保存未发布的草稿&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;_includes&lt;br /&gt;
+ 可以用来存放一些小的可复用的模块，方便通过{ % include file.ext %}（去掉前两个{中或者{与%中的空格，下同）灵活的调用。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;_layouts&lt;br /&gt;
+ layouts（布局）是包裹在文章外部的模板。布局可以在 YAML 头信息中根据不同文章进行选择。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;_posts&lt;br /&gt;
+ 文章存放位置&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;_site&lt;br /&gt;
+ 这个是Jekyll生成的最终的文档，不用去关心。最好把他放在你的.gitignore文件中。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;.jekyll-metadata&lt;br /&gt;
+ 该文件帮助 Jekyll 跟踪哪些文件从上次建立站点开始到现在没有被修改，哪些文件需要在下一次站点建立时重新生成。最好把它加入.gitignore文件中。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;index.html&lt;br /&gt;
+ 如果这些文件中包含 YAML 头信息 部分，Jekyll 就会自动将它们进行转换。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;jekyll-2&quot;&gt;jekyll的配置&lt;/h3&gt;
+
+&lt;p&gt;jekyll的配置写在_config.yml中，具体配置有很多，在此放出我的配置，更详细的内容请参考&lt;a href=&quot;http://jekyllcn.com/&quot;&gt;jekyll的官方配置文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;title: 善恶彼岸&lt;br /&gt;
+subtitle: 个人世界&lt;br /&gt;
+description: 欢迎来到我的世界~&lt;br /&gt;
+avatarTitle: ghccc&lt;br /&gt;
+avatarDesc: 折腾/作死&lt;br /&gt;
+url: “www.ghccc.tk”&lt;br /&gt;
+comment:&lt;br /&gt;
+social:&lt;br /&gt;
+    weibo:&lt;br /&gt;
+    github: ghccc&lt;br /&gt;
+    twitter: &lt;br /&gt;
+    mail:&lt;br /&gt;
+ baidu:&lt;br /&gt;
+    id: 89149bc63ddd0fbda82902ae936b8a22&lt;br /&gt;
+    id: UA-98133145-1 &lt;br /&gt;
+    host: auto &lt;br /&gt;
+permalink: /:year/:month/:title/&lt;br /&gt;
+highlighter: rouge&lt;br /&gt;
+textColor: #FF000&lt;br /&gt;
+cover_color: clear&lt;br /&gt;
+blog_button:&lt;br /&gt;
+    title: 博客主页&lt;br /&gt;
+nav:&lt;br /&gt;
+    - {title: 所有文章, description: archive, url: ‘/archive’}&lt;br /&gt;
+    - {title: 标签, description: tags, url: ‘/tags’} &lt;br /&gt;
+    - {title: 关于我, description: about, url: ‘/about’}&lt;br /&gt;
+ gems: [jekyll-paginate]&lt;br /&gt;
+paginate: 20&lt;br /&gt;
+paginate_path: “page/:num/”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;如果不想自己配置模板怎么办&lt;/h3&gt;
+&lt;p&gt;可以去&lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/Sites&quot;&gt;这里&lt;/a&gt;寻找自己中意的模板，或者你也可以直接fork&lt;a href=&quot;https://github.com/ghccc/ghccc.github.io&quot;&gt;我的模板&lt;/a&gt;，然后把源码下载下来稍加修改之后放到刚才创建的本地目录里面。
+推送到远程仓库：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;cd username.github.io&lt;br /&gt;
+git add remote username.github.io&lt;br /&gt;
+git commit -m “build blog”&lt;br /&gt;
+git push&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;注：这里的“username”指你的github用户名&lt;/p&gt;
+
+&lt;p&gt;这样博客就被部署在github上了，过十分钟左右就可以通过ghcc.github.io进行访问。&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 29 Apr 2017 20:00:00 +0800</pubDate>
+        <link>www.ghccc.tk/2017/04/build-blog/</link>
+        <guid isPermaLink="true">www.ghccc.tk/2017/04/build-blog/</guid>
+        
+        
+        <category>博客</category>
+        
+        <category>网站</category>
+        
+      </item>
+    
+      <item>
+        <title>Test</title>
+        <description>&lt;h1 id=&quot;leopard&quot;&gt;leopard&lt;/h1&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;使用手册&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://baixin.io/2016/10/jekyll_tutorials1/&quot;&gt;Jekyll搭建个人博客&lt;/a&gt;  :  使用Jekyll搭建个人博客的教程，以及如果把博客模板修改成你自己的博客，里面也有大量的评论，及 Jekyll 搭建博客出现过的问题。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://baixin.io/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&quot;&gt;HEXO搭建个人博客&lt;/a&gt; : 使用 HEXO 基于 Github Page 搭建个人博客， 教程里面累计了大量提问和评论，如果你在搭建博客时遇到问题，可以看看这个教程。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;使用条件&lt;/h3&gt;
+
+&lt;p&gt;Jekyll 支持 Mac 、Windows、ubuntu 、Linux 操作系统                   &lt;br /&gt;
+Jekyll 需要依赖：Ruby、bundler&lt;/p&gt;
+
+&lt;h4 id=&quot;jekyll&quot;&gt;安装Jekyll&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jekyll.bootcss.com/&quot;&gt;Jekyll中文官方文档&lt;/a&gt; ， 如果你已经安装过了 Jekyll，可以忽略此处。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ gem install jekyll&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;section-2&quot;&gt;获取博客模板&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ git clone https://github.com/leopardpan/leopardpan.github.io.git&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;或者直接&lt;a href=&quot;https://github.com/leopardpan/leopardpan.github.io/archive/master.zip&quot;&gt;下载博客&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;进leopardpan.github.io/ 目录下， 开启本地服务&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ jekyll server&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在浏览器输入 &lt;a href=&quot;127.0.0.1:4000&quot;&gt;127.0.0.1:4000&lt;/a&gt; ， 就可以看到博客效果了。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;提示&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;如果你想使用我的模板，请把 _posts/ 目录下的文章都去掉。&lt;/li&gt;
+    &lt;li&gt;修改 _config.yml 文件里面的内容为你自己的个人信息。&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如果在部署博客的时候发现问题，可以直接在&lt;a href=&quot;https://github.com/leopardpan/leopardpan.github.io/issues&quot;&gt;Issues&lt;/a&gt;里面提问。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;把这个博客变成你自己的博客&lt;/h3&gt;
+
+&lt;p&gt;根据上面【提示】修改过后，在你的github里创建一个username.github.io的仓库，username指的值你的github的用户名。    &lt;br /&gt;
+创建完成后，把我的这个模板使用git push到你的username.github.io仓库下就行了。
+搭建博客如果遇到问题可以看看我教程&lt;a href=&quot;http://baixin.io/2016/10/jekyll_tutorials1/&quot;&gt;Jekyll搭建个人博客&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;效果预览&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-6&quot;&gt;头像效果&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/readme//icon.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果你只想要我博客里的头像效果，你只需要拿 leopardpan.github.io/_includes/side-panel.html 文件里面 &lt;code class=&quot;highlighter-rouge&quot;&gt;头像效果&lt;/code&gt; 和 leopardpan.github.io/css/main.css 里面最后面 &lt;code class=&quot;highlighter-rouge&quot;&gt;头像效果&lt;/code&gt; 部分就行了。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;section-7&quot;&gt;博客首页&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/readme//img4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;section-8&quot;&gt;文章详情&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/readme//img3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/readme//img2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/readme//img1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-9&quot;&gt;感谢&lt;/h4&gt;
+
+&lt;p&gt;本博客在&lt;a href=&quot;https://github.com/onevcat/vno-jekyll&quot;&gt;Vno Jekyll&lt;/a&gt;基础上修改的。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 26 Apr 2017 00:00:00 +0800</pubDate>
+        <link>www.ghccc.tk/2017/04/test/</link>
+        <guid isPermaLink="true">www.ghccc.tk/2017/04/test/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
