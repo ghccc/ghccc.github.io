@@ -43,6 +43,24 @@ ga:
 
 
 permalink: /:year/:month/:title/
+
+markdown: kramdown
+
+
+kramdown:
+  input:  GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: true
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+  syntax_highlighter: rouge
+
+
 # Format
 highlighter: rouge
 
