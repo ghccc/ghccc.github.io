@@ -114,6 +114,49 @@ paginate_path: "page/:num/"
 ### 如果不想自己配置模板怎么办
 
 可以去[这里][4]寻找自己中意的模板，或者你也可以直接fork[我的模板][5]，然后把源码下载下来稍加修改之后放到刚才创建的本地目录里面。
+
+#### 如何修改
+
+1.修改配置文件  
+首先打开
+ _config.yml文件，修改如下选项：
+
+* titile:你的博客标题
+* subtitle:你的博客子标题
+* description:你的博客描述
+* avatarTitle：你的头像里的标题
+* avatarDesc：你的头像描述
+* url:改成你的域名
+* comment里的duoshuo:改成你的多说的用户名
+* social里面的
+* weibo：你的微薄id（不是用户昵称）
+* github：你的github用户名
+* mail:你的邮箱
+其他的可以补充，没有的可以不写，将原文中的删除即可
+* baidu: id：你的百度统计的id
+* ga: id:你的Google Analytics的id
+
+2.修改个人介绍文件
+ about.md
+
+在里面写上一段自我介绍就好
+
+3.头像
+
+打开images文件夹，将你自己的头像文件改名为
+avatar.jpg
+
+4.网站图标
+
+如果你想使用自己的个性网站图标，同样的将你的图标图片放在该文件夹，并重命名为favicon.png
+
+5.博客文章
+
+打开
+_posts文件夹，将其清空，然后把自己写的文章放进去。
+这里面，你在新建博客时必须包含前6行的内容，其中title后写博客标题，date后时间（但格式要保持一致），tag后写标签。后面的内容则是markdown语法的内容。 将上述文件保存，命名为：2016-08-04-MyFirstBlog.md即可。
+
+
 推送到远程仓库：
 
 > cd username.github.io  
