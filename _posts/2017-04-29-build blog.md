@@ -174,7 +174,8 @@ git push
 ps：使用github提供的域名可以使用github pages自带的强制https加密选项，如果是自定义域名只能自己安装ssl加密证书。
 
 ### 评论和统计
-虽然多说很好用，但是六月一号就要关闭了，所以只好迁移到网易云跟帖，jekyll评论代码接入请看[官方文档](https://gentie.163.com/help.html)。
+虽然多说很好用，但是六月一号就要关闭了，所以只好迁移到网易云跟帖，jekyll评论代码接入请看[官方文档](https://gentie.163.com/help.html)。  
+五月一号修改：评论系统换成了disqus，因为被墙，所以你们懂的......
 用的是[百度统计](http://zhanzhang.baidu.com)和 [Google analytics](https://www.google.com/analytics/),接入方式很简单，获取统计id，然后在_config.yml中填入id即可。
 
 ### 小绿锁
