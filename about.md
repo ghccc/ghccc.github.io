@@ -30,6 +30,23 @@ title: 关于我
 
 2017.04.29，发表第一篇博文
 
+### 实用网址
+
+[前端网址导航](http://nav.templatesy.com/)
+
+[w3school-全面免费的web技术教程](http://www.w3school.com.cn/)
+
+[Xiaolei's Wiki-这才是属于程序员的知识体系](http://wiki.xiaolei.tech/#!index.md)
+
+### 技术博客
+[廖雪峰-各种高质量技术教程](http://www.liaoxuefeng.com/)
+
+### 博客待添加功能(不一定更新)
+
+添加全局bgm
+
+增加个人相册
+
 
 
 
