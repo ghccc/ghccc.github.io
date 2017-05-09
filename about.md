@@ -34,6 +34,8 @@ title: 关于我
 
 [前端网址导航](http://nav.templatesy.com/)
 
+[检查html页面错误](https://validator.w3.org)
+
 [w3school-全面免费的web技术教程](http://www.w3school.com.cn/)
 
 [Xiaolei's Wiki-这才是属于程序员的知识体系](http://wiki.xiaolei.tech/#!index.md)
