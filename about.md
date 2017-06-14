@@ -6,7 +6,7 @@ title: 关于我
 
 一个电脑技术爱好者，喜欢研究一些IT技术。  
 平时喜欢整理个人博客，逛逛技术论坛。  
-了解建站和wp的一些知识。  
+了解建站和wp的一些知识,熟练使用linux  
 最近在学习html5和css3，准备给博客来一次大升级。 
 
 ### 爱好
@@ -15,10 +15,6 @@ title: 关于我
 喜欢东野圭吾  
 喜欢书法
 
-### 感谢
- 
-本博客的模板基于[潘柏信](http://baixin.io/#blog),有兴趣请参考该博客的[Jekyll搭建个人博客](http://baixin.io/2016/10/jekyll_tutorials1/)  
-更多内容更新中......
 
 ### 交流
 
@@ -28,10 +24,6 @@ title: 关于我
 
 https://ehlxr.me/ 评论系统有趣  
 http://zsaber.com/blog/全局bgm
-
-
-
-
 
 ### 关于博客
 
@@ -48,6 +40,7 @@ http://zsaber.com/blog/全局bgm
 [w3school-全面免费的web技术教程](http://www.w3school.com.cn/)
 
 [Xiaolei's Wiki-这才是属于程序员的知识体系](http://wiki.xiaolei.tech/#!index.md)
+[鸟哥的linux私房菜]<http://linux.vbird.org/>
 
 ### 技术博客
 [廖雪峰-各种高质量技术教程](http://www.liaoxuefeng.com/)
@@ -57,6 +50,11 @@ http://zsaber.com/blog/全局bgm
 添加全局bgm
 
 增加个人相册
+
+### 感谢
+ 
+本博客的模板基于[潘柏信](http://baixin.io/#blog),有兴趣请参考该博客的[Jekyll搭建个人博客](http://baixin.io/2016/10/jekyll_tutorials1/)  
+更多内容更新中......
 
 
 
