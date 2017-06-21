@@ -12,9 +12,11 @@ tag: vps 服务
 
 ### 二.开始搭建
 1.在[owncloud官网](https://doc.owncloud.org/server/latest/admin_manual/installation/linux_installation.html)找到[一键包下载地址](https://download.owncloud.org/download/repositories/stable/owncloud/),ssh连接上vps，并键入：
+
 	rpm --import https://download.owncloud.org/download/repositories/stable/CentOS_7/repodata/repomd.xml.key
 
 以root身份运行以下命令添加存储库并安装：
+
 	wget http://download.owncloud.org/download/repositories/stable/CentOS_7/ce:stable.repo -O /etc/yum.repos.d/ce:stable.repo
 	yum clean expire-cache
 	yum install owncloud
