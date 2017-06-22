@@ -6,8 +6,8 @@ tag: vps 服务
 ---
 ### 一.安装准备
 
-1.准备一台已经安装了cent os7的vps，确保80端口和22端口已经打开，并且允许远程连接。
-2.准备好一个自己用的顺手的ssh远程连接软件，我用的是[remmina远程连接](https://github.com/FreeRDP/Remmina/wiki)
+1.准备一台已经安装了cent os7的vps，确保80端口和22端口已经打开，并且允许远程连接。  
+2.准备好一个自己用的顺手的ssh远程连接软件，我用的是[remmina远程连接](https://github.com/FreeRDP/Remmina/wiki)  
 3.OwnCloud 跨平台支持 Windows、Mac、Android、iOS、Linux 等平台，而且还提供了网页版和 WebDAV 形式访问，因此你可以在任何电脑、手机上都能轻松获取上传文件，所以毫无疑问选择它。
 
 ### 二.开始搭建
