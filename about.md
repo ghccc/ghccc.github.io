@@ -44,7 +44,7 @@ http://zsaber.com/blog/全局bgm
 
 [Xiaolei's Wiki-这才是属于程序员的知识体系](http://wiki.xiaolei.tech/#!index.md)
 
-[鸟哥的linux私房菜]<http://linux.vbird.org/>
+[鸟哥的linux私房菜]（http://linux.vbird.org/）
 
 ### 技术博客
 
