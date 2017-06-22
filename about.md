@@ -22,7 +22,8 @@ title: 关于我
 
 ### 值得借鉴的博客
 
-https://ehlxr.me/ 评论系统有趣  
+https://ehlxr.me/ 评论系统有趣
+
 http://zsaber.com/blog/全局bgm
 
 ### 关于博客
@@ -33,6 +34,8 @@ http://zsaber.com/blog/全局bgm
 
 ### 实用网址
 
+[markdown语法速查](https://www.binarization.com/archive/2016/markdown-guide/)
+
 [前端网址导航](http://nav.templatesy.com/)
 
 [检查html页面错误](https://validator.w3.org)
@@ -40,9 +43,11 @@ http://zsaber.com/blog/全局bgm
 [w3school-全面免费的web技术教程](http://www.w3school.com.cn/)
 
 [Xiaolei's Wiki-这才是属于程序员的知识体系](http://wiki.xiaolei.tech/#!index.md)
+
 [鸟哥的linux私房菜]<http://linux.vbird.org/>
 
 ### 技术博客
+
 [廖雪峰-各种高质量技术教程](http://www.liaoxuefeng.com/)
 
 ### 博客待添加功能(不一定更新)
@@ -53,7 +58,9 @@ http://zsaber.com/blog/全局bgm
 
 ### 感谢
  
-本博客的模板基于[潘柏信](http://baixin.io/#blog),有兴趣请参考该博客的[Jekyll搭建个人博客](http://baixin.io/2016/10/jekyll_tutorials1/)  
+本博客的模板基于[潘柏信](http://baixin.io/#blog),有兴趣请参考该博客的[Jekyll搭建个人博客](http://baixin.io/2016/10/jekyll_tutorials1/) 
+
+
 更多内容更新中......
 
 
