@@ -38,6 +38,6 @@ tag: vps 服务
 
 
 ### 四.开始上传
-owncloud支持多平台，不但可以通过web上传，还可以在Windows,Mac，ios,linux，安卓等平台使用，不过需要注意的是在谷歌应用商店和ios应用商店里面的owncloud客户端并不免费，需要支付0.99美刀才能下载。
+owncloud桌面端，手机端下载，[官网链接]（https://owncloud.org/install/#install-clients），不过需要注意的是在谷歌应用商店和ios应用商店里面的owncloud客户端并不免费，需要支付0.99美刀才能下载。
 
 
