@@ -68,11 +68,11 @@ gapps-x86-6.0_20160402.zip
 
 1. [官网](https://www.genymotion.com/help/desktop/faq/#google-play-services)
 
-[Ubuntu 14.04 使用速度极快的Genymotion 取代蜗牛速度的原生AVD模拟器](http://blog.csdn.net/tecn14/article/details/27566599)
+2. [Ubuntu 14.04 使用速度极快的Genymotion 取代蜗牛速度的原生AVD模拟器](http://blog.csdn.net/tecn14/article/details/27566599)
 
-[github上的genymotion](https://gist.github.com/wbroek/9321145)
+3. github上的genymotion](https://gist.github.com/wbroek/9321145)
 
-[genymotion参考配置指南](http://www.snowdream.tech/2016/10/17/android-genymotion-install-and-settings/)
+4. [genymotion参考配置指南](http://www.snowdream.tech/2016/10/17/android-genymotion-install-and-settings/)
 
-[Genymotion Tool Collections](http://23pin.logdown.com/posts/697026)
+5. [Genymotion Tool Collections](http://23pin.logdown.com/posts/697026)
 
