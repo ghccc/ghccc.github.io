@@ -70,7 +70,7 @@ gapps-x86-6.0_20160402.zip
 
 2. [Ubuntu 14.04 使用速度极快的Genymotion 取代蜗牛速度的原生AVD模拟器](http://blog.csdn.net/tecn14/article/details/27566599)
 
-3. github上的genymotion](https://gist.github.com/wbroek/9321145)
+3. [github上的genymotion](https://gist.github.com/wbroek/9321145)
 
 4. [genymotion参考配置指南](http://www.snowdream.tech/2016/10/17/android-genymotion-install-and-settings/)
 
