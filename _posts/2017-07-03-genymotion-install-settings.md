@@ -39,12 +39,16 @@ ARM_Translation_Android系列包下载地址：[这里](https://mega.nz/#F!JhcFw
 
 [gapps](https://www.androidfilehost.com/?fid=95832962473395379)
 
-安卓 5.x ：ARM_Translation_Lollipop    
+安卓 5.x ：ARM_Translation_Lollipop   
 gapps-x86-5.0_20160402.zip/gapps-x86-5.1_20160402.zip
 
 
 安卓 6.x： ARM_Translation_Marshmallow   
 gapps-x86-6.0_20160402.zip
+
+### 三.结果
+
+终于可以好好的玩一下农药了,谁都别拦我，我要上王者!!!!!!!!!!!!
 
 
 
@@ -62,7 +66,7 @@ gapps-x86-6.0_20160402.zip
 
 参考文章：
 
-[官网](https://www.genymotion.com/help/desktop/faq/#google-play-services)
+1. [官网](https://www.genymotion.com/help/desktop/faq/#google-play-services)
 
 [Ubuntu 14.04 使用速度极快的Genymotion 取代蜗牛速度的原生AVD模拟器](http://blog.csdn.net/tecn14/article/details/27566599)
 
