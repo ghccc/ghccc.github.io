@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  在ubuntu16.04上安装genymotion安卓模拟器
-date:   2017-05-13 
+date:   2017-07-03
 tag: 安卓 玩机
 ---
 ### 一.起因
@@ -39,10 +39,12 @@ ARM_Translation_Android系列包下载地址：[这里](https://mega.nz/#F!JhcFw
 
 [gapps](https://www.androidfilehost.com/?fid=95832962473395379)
 
-安卓 5.x： ARM_Translation_Lollipop           gapps-x86-5.0_20160402.zip/gapps-x86-5.1_20160402.zip
+安卓 5.x ：ARM_Translation_Lollipop    
+gapps-x86-5.0_20160402.zip/gapps-x86-5.1_20160402.zip
 
 
-安卓 6.x： ARM_Translation_Marshmallow        gapps-x86-6.0_20160402.zip
+安卓 6.x： ARM_Translation_Marshmallow   
+gapps-x86-6.0_20160402.zip
 
 
 
@@ -62,11 +64,11 @@ ARM_Translation_Android系列包下载地址：[这里](https://mega.nz/#F!JhcFw
 
 [官网](https://www.genymotion.com/help/desktop/faq/#google-play-services)
 
-[Ubuntu 14.04 使用速度极快的Genymotion 取代蜗牛速度的原生AVD模拟器]（http://blog.csdn.net/tecn14/article/details/27566599)
+[Ubuntu 14.04 使用速度极快的Genymotion 取代蜗牛速度的原生AVD模拟器](http://blog.csdn.net/tecn14/article/details/27566599)
 
 [github上的genymotion](https://gist.github.com/wbroek/9321145)
 
-[genymotion参考配置指南]（http://www.snowdream.tech/2016/10/17/android-genymotion-install-and-settings/）
+[genymotion参考配置指南](http://www.snowdream.tech/2016/10/17/android-genymotion-install-and-settings/)
 
 [Genymotion Tool Collections](http://23pin.logdown.com/posts/697026)
 
