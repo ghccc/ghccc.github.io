@@ -13,7 +13,7 @@ crontab是用于设置周期性执行的命令，通过crontab，我们可以在
 
 crontab \[-u user\]file
 
-crontab \[-u user\] \[ -e | -l | -r |-i \]
+crontab \[-u user\] \[-e|-l|-r|-i\]
 
 #### 2.参数介绍
 
@@ -82,31 +82,34 @@ $sudo /etc/init.d/cron reload   #重新加载服务
 ##### 使用单引号就不用加反斜线了。这个例子会产生这样一个文件~/error_\2006\04\03.txt
 
     1 2 3 4 5 touch ~/error_$（date '+\%Y\%m\%d'）.txt
+
 下例是另一个常见错误：
 
-##### Prepare for the daylight savings time shift
+##### 准备夏令时转换
 
     59 1 1-7 4 0 /root/shift_my_times.sh
 
-初看似要在四月的第一个星期日早晨1时59分运行shift_my_times.sh，但是这样设置不对。
+##### 初看似要在四月的第一个星期日早晨1时59分运行shift_my_times.sh，但是这样设置不对。
 与其他域不同，第三和第五个域之间执行的是“或”操作。所以这个程序会在4月1日至7日以及4月余下的每一个星期日执行。
 这个例子可以重写如下：
 
-##### Prepare for the daylight savings time shift
+##### 准备夏令时转换
 
     59 1 1-7 4 * test `date +\%w` = 0 && /root/shift_my_times.sh
+
 另一个常见错误是对分钟设置的误用。下例欲一个程两个小时运行一次：
 
-##### adds date to a log file
+##### 将时间保存为日志文件
 
     * 0,2,4,6,8,10,12,14,16,18,20,22 * * * date >> /var/log/date.log
+
 而上述设置会使该程序在偶数小时内的每一分钟执行一次。正确的设置是：
 
-##### runs the date command every even hour at the top of the hour
+##### 每隔两个小时运行一次date命令
 
     0 0,2,4,6,8,10,12,14,16,18,20,22 * * * date >> /var/log/date.log
 
-##### an even better way
+##### 简化写法
 
     0 */2 * * * date >> /var/log/date.log
     
