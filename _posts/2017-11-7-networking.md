@@ -44,7 +44,7 @@ dns服务器：114.114.114.114
 
 然后设置内网转发，所有10.107.1开头的请求全部走enp4s0f2网卡
 
-	sudo route add -net 10.108.1.0 netmask 255.255.255.0 dev enp4s0f2
+	sudo route add -net 10.107.1.0 netmask 255.255.255.0 dev enp4s0f2
 
 
 备注：以上全部是临时设置，重启设备之后就会还原
