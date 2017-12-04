@@ -26,7 +26,7 @@ Windows32位的oracle instant client
 
 [plsql和汉化包下载](https://www.allroundautomations.com/bodyplsqldevreg.html)
 
-[oracle instant client下载](https://www.allroundautomations.com/bodyplsqldevreg.html)
+[oracle instant client下载](http://www.oracle.com/technetwork/cn/topics/winsoft-085727.html)
 
 备注：下载之前记得勾选许可协议并且登录oracle账号
 
